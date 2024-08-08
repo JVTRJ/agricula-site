@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultivaTerra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="imagens/logo.png" alt="Logo do Site Agrícola" class="logo">
+            <h1>CultivaTerra</h1>
+            <nav>
+                <ul>
+                    <li><a href="#precos">Preços</a></li>
+                    <li><a href="#pedido">Fazer Pedido</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="precos">
+        <div class="container">
+            <h2>Preços dos Produtos</h2>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Imagem</th>
+                            <th>Preço (R$)</th>
+                            <th>Quantidade</th>
+                            <th>Total (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Porco</td>
+                            <td><img src="imagens/porco.jpg" alt="Porco"></td>
+                            <td>300</td>
+                            <td><input type="number" class="quantidade" data-preco="300" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Galinha</td>
+                            <td><img src="imagens/galinha.jpg" alt="Galinha"></td>
+                            <td>50</td>
+                            <td><input type="number" class="quantidade" data-preco="50" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Vaca</td>
+                            <td><img src="imagens/vaca.jpg" alt="Vaca"></td>
+                            <td>1500</td>
+                            <td><input type="number" class="quantidade" data-preco="1500" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Ovelha</td>
+                            <td><img src="imagens/ovelha.jpg" alt="Ovelha"></td>
+                            <td>400</td>
+                            <td><input type="number" class="quantidade" data-preco="400" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Cabra</td>
+                            <td><img src="imagens/cabra.jpg" alt="Cabra"></td>
+                            <td>250</td>
+                            <td><input type="number" class="quantidade" data-preco="250" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Alface</td>
+                            <td><img src="imagens/alface.jpg" alt="Alface"></td>
+                            <td>2</td>
+                            <td><input type="number" class="quantidade" data-preco="2" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Beterraba</td>
+                            <td><img src="imagens/beterraba.jpg" alt="Beterraba"></td>
+                            <td>3</td>
+                            <td><input type="number" class="quantidade" data-preco="3" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Milho</td>
+                            <td><img src="imagens/milho.jpg" alt="Milho"></td>
+                            <td>1</td>
+                            <td><input type="number" class="quantidade" data-preco="1" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Trigo</td>
+                            <td><img src="imagens/trigo.jpg" alt="Trigo"></td>
+                            <td>5</td>
+                            <td><input type="number" class="quantidade" data-preco="5" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Abóbora</td>
+                            <td><img src="imagens/abobora.jpg" alt="Abóbora"></td>
+                            <td>4</td>
+                            <td><input type="number" class="quantidade" data-preco="4" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <td>Cenoura</td>
+                            <td><img src="imagens/cenoura.jpg" alt="Cenoura"></td>
+                            <td>2</td>
+                            <td><input type="number" class="quantidade" data-preco="2" min="0" value="0"></td>
+                            <td class="total">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button id="calcular">Calcular Total</button>
+            <p id="total">Total: R$ 0</p>
+        </div>
+    </section>
+    
+    <section id="pedido">
+        <div class="container">
+            <h2>Fazer Pedido</h2>
+            <form id="form-pedido">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <button type="button" id="fazer-pedido">Fazer Pedido</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="resumo-pedido">
+        <div class="container">
+            <h2>Resumo do Pedido</h2>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Preço Unitário (R$)</th>
+                            <th>Total (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resumo-itens">
+                    </tbody>
+                </table>
+            </div>
+            <p id="resumo-total">Total: R$ 0</p>
+        </div>
+    </section>
+    
+    <section id="clientes">
+        <div class="container">
+            <h2>Clientes</h2>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="clientes-itens">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p><strong>Endereço:</strong> Rua das Plantations, 123, Santo Antônio da Platina</p>
+            <p><strong>Email:</strong> <a href="mailto:cultivaterra@gmail.com">cultivaterra@gmail.com</a></p>
+            <p><strong>Telefone:</strong> <a href="tel:+5543987654321">(43) 98765-4321</a></p>
+        </div>
+    </section>
+
+    <section id="curiosidades">
+        <div class="container">
+            <h2>Curiosidades</h2>
+            <div class="curiosidades-content">
+                <p><strong>Porco:</strong> Os porcos são animais altamente inteligentes, com uma capacidade cognitiva comparável à dos cães. Eles são capazes de resolver problemas complexos e aprender novos truques. Além disso, os porcos têm uma excelente memória e podem se lembrar de coisas por longos períodos de tempo.</p>
+                
+                <p><strong>Galinha:</strong> As galinhas têm uma visão superior à dos humanos, sendo capazes de ver uma gama mais ampla de cores, incluindo o ultravioleta. Elas são animais sociais que formam hierarquias complexas e têm um forte senso de antecipação.</p>
+                
+                <p><strong>Vaca:</strong> As vacas são animais de grande importância econômica e cultural. Elas têm um excelente senso de humor e formam laços profundos com outros membros do grupo. Cada vaca tem uma personalidade distinta e pode reconhecer a voz de seu cuidador. Além disso, as vacas podem produzir leite por vários anos e a qualidade do leite pode variar conforme a dieta e os cuidados recebidos.</p>
+                
+                <p><strong>Ovelha:</strong> As ovelhas possuem um excelente senso de orientação e podem se lembrar de locais e de outros animais por muitos anos. Elas são conhecidas por sua capacidade de formar laços com outros membros do rebanho, e o estresse pode afetar negativamente sua saúde. Ovelhas também têm uma excelente visão periférica, o que as ajuda a detectar predadores.</p>
+                
+                <p><strong>Abóbora:</strong> A abóbora é um dos vegetais mais versáteis e nutritivos. Ela é rica em vitaminas A e C, e em fibras dietéticas. Além disso, a abóbora pode ser utilizada em uma variedade de pratos, desde sopas e purês até sobremesas. Ela tem sido cultivada desde a antiguidade, com evidências de seu uso datando de 7000 a.C. na América Central.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
